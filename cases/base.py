@@ -26,10 +26,10 @@ class Test(unittest.TestCase):
 
         self.LOGIN = os.getenv('LOGIN')
         self.PASSWORD = os.getenv('PASSWORD')
-        self.NAME = os.getenv('NAME')
+        self.MAIL = os.getenv('MAIL')
         self.LOGIN2 = os.getenv('LOGIN2')
         self.PASSWORD2 = os.getenv('PASSWORD2')
-        self.NAME2 = os.getenv('NAME2')
+        self.MAIL2 = os.getenv('MAIL2')
         self.ID2 = os.getenv('ID2')
         self.ID = os.getenv('ID')
 

@@ -15,7 +15,7 @@ class LoginPage(Page):
     LOGIN_BUTTON = '.auth-form__submit.auth-view__button'
     LOGIN_ERROR = '.errors.name-errors.input-error-text'
 
-    REDIRECT = ''
+    REGISTRATION_BUTTON = '.auth-button.auth-view__button'
 
     def fill_form(self, login, password):
         login_input = self.wait_until_and_get_elem_by_css(self.LOGIN_INPUT)
@@ -44,6 +44,6 @@ class LoginPage(Page):
         error = self.wait_until_and_get_elem_by_css(self.PASSWORD_ERROR)
         return error.text
 
-    # def click_redirect(self):
-    #     button = self.wait_until_and_get_elem_by_css(self.REDIRECT)
-    #     button.click()
+    def click_redirect(self):
+        button = self.wait_until_and_get_elem_by_css(self.REGISTRATION_BUTTON)
+        button.click()

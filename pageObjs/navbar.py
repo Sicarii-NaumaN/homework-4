@@ -15,13 +15,15 @@ class NavbarPage(Page):
     BELL = '.notifications-toggle'
     NIGHT_THEME = '.sidebar__toggle theme-toggle'
     CHAT = '.sidebar__toggle.slider-toggle'
-    NO_NOTIFICATION_TITLE = '.slider__feature-description'
 
     PROFILE = '.navbar__username'
     LOGOUT = '.navbar__dropdown-action'
-    DROP_DOWN_MENU = '.navbar__action'
+    DROP_DOWN_MENU = '.fas.fa-ellipsis-v.navbar__action-icon'
     REGISTRATION = '.navbar__auth-link navbar__auth-link_secondary'
     LOGIN = '.navbar__auth-link.navbar__auth-link_primary'
+
+    LOGIN_TITLE = '.navbar__auth-text'
+    NO_NOTIFICATION_TITLE = '.slider__feature-description'
 
     def get_login(self):
         login_text = self.wait_until_and_get_elem_by_css(self.USERNAME)
@@ -49,6 +51,9 @@ class NavbarPage(Page):
         chat.click()
 
     def click_logout(self):
+        menu = self.wait_until_and_get_elem_by_css(self.DROP_DOWN_MENU)
+        menu.click()
+
         logout = self.wait_until_and_get_elem_by_css(self.LOGOUT)
         logout.click()
 
@@ -59,3 +64,7 @@ class NavbarPage(Page):
     def get_registration_logo(self):
         logo = self.wait_until_and_get_elem_by_css(self.REGISTRATION)
         return logo
+
+    def get_login_text(self):
+        title = self.wait_until_and_get_elem_by_css(self.LOGIN_TITLE)
+        return title.text

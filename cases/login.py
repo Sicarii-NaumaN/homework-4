@@ -63,8 +63,7 @@ class LoginTest(Test):
         self.page.fill_form(rand_string, self.PASSWORD)
         self.page.click_login_button()
 
-        login_page = LoginPage(self.driver)
-        alert_message = login_page.get_toast_message()
+        alert_message = self.page.get_toast_message()
 
         self.assertEqual(INCORRECT_LOGIN_OR_PASSWORD, alert_message)
 
@@ -117,8 +116,7 @@ class LoginTest(Test):
         self.page.fill_form(self.LOGIN, rand_string)
         self.page.click_login_button()
 
-        login_page = LoginPage(self.driver)
-        alert_message = login_page.get_toast_message()
+        alert_message = self.page.get_toast_message()
 
         self.assertEqual(INCORRECT_LOGIN_OR_PASSWORD, alert_message)
 

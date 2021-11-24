@@ -9,11 +9,13 @@ class LoginPage(Page):
     TOAST_MESSAGE = '.toast__message'
 
     PASSWORD_INPUT = 'input[name="password"]'
-    PASSWORD_ERROR = '.errors.password-errors.input-error-text'
-
     LOGIN_INPUT = 'input[name="username"]'
-    LOGIN_BUTTON = '.auth-form__submit.auth-view__button'
+
+    PASSWORD_ERROR = '.errors.password-errors.input-error-text'
     LOGIN_ERROR = '.errors.name-errors.input-error-text'
+
+    LOGIN_BUTTON = '.auth-form__submit.auth-view__button'
+
 
     REGISTRATION_BUTTON = '.auth-button.auth-view__button'
 

@@ -26,7 +26,7 @@ class Test(unittest.TestCase):
 
         self.LOGIN = os.getenv('LOGIN')
         self.PASSWORD = os.getenv('PASSWORD')
-        self.MAIL = os.getenv('MAIL')
+        self.EMAIL = os.getenv('EMAIL')
         self.LOGIN2 = os.getenv('LOGIN2')
         self.PASSWORD2 = os.getenv('PASSWORD2')
         self.MAIL2 = os.getenv('MAIL2')
